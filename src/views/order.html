@@ -1,0 +1,94 @@
+<%- include('plantillas/declaracion.html') %>
+<%- include('plantillas/forms.html') %>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="col-md-12 order-details">
+        <div class="section-title text-center">
+            <h3 class="title">Tu orden</h3>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Precio</th>
+                </tr>
+            </thead>
+            <tbody id="contenedor">
+
+            </tbody>
+        </table>
+        <div class="">
+            <div><strong>TOTAL</strong></div>
+            <div>
+                <strong id="total" class=""></strong>
+            </div>
+        </div>
+        <div class="payment-method">
+            <div class="input-radio">
+                <input type="radio" name="payment" id="payment-1">
+                <label for="payment-1">
+                    <span></span>
+                    Direct Bank Transfer
+                </label>
+                <div class="caption">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore
+                        et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="input-radio">
+                <input type="radio" name="payment" id="payment-2">
+                <label for="payment-2">
+                    <span></span>
+                    Cheque Payment
+                </label>
+                <div class="caption">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore
+                        et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="input-radio">
+                <input type="radio" name="payment" id="payment-3">
+                <label for="payment-3">
+                    <span></span>
+                    Paypal System
+                </label>
+                <div class="caption">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore
+                        et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+        <div class="input-checkbox">
+            <input type="checkbox" id="terms">
+            <label for="terms">
+                <span></span>
+                I've read and accept the <a href="#">terms & conditions</a>
+            </label>
+        </div>
+        <button id="verificador" class="primary-btn order-submit btn-block">
+            Place order
+        </button>
+    </div>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<script>
+    loadOrder()
+    loadCart()
+    deleteProduct()
+    verifications()
+</script>
+<%- include('plantillas/footer.html') %>
+<%- include('plantillas/cierre.html') %>

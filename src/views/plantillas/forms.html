@@ -1,0 +1,111 @@
+<!--FORMS-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
+<div class="modal-dialog cascading-modal" role="document">
+    <div class="modal-content">
+        <div class="modal-c-tabs">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab"><i class="fa fa-user"
+                            aria-hidden="true"></i></i>
+                        Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#panel2" role="tab"><i class="fa fa-user-plus"
+                            aria-hidden="true"></i></i>
+                        Register</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <!--Panel 1 Login-->
+                <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+                    <!--Form-->
+                    <form class="text-center border border-light p-5" action="signin" method="POST">
+                        <p class="h4 mb-4">Sign in</p>
+                        <input type="email" name="email" class="form-control mb-4" placeholder="E-mail">
+                        <input type="password" name="pass" class="form-control mb-4" placeholder="Password">
+                        <div class="d-flex justify-content-around">
+                            <div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"
+                                        id="defaultLoginFormRemember">
+                                    <label class="custom-control-label" for="defaultLoginFormRemember">Remember
+                                        me</label>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="">Forgot password?</a>
+                            </div>
+                        </div>
+                        <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+                        <p>Not a member?
+                            <a href="">Register</a>
+                        </p>
+                        <p>or sign in with:</p>
+                        <a href="#" class="mx-2" role="button"><i
+                                class="fab fa-facebook-f light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i
+                                class="fab fa-twitter light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i
+                                class="fab fa-linkedin-in light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+                    </form>
+                </div>
+                <!--/.Panel 1-->
+                <!--Panel 2 Registro-->
+                <div class="tab-pane fade" id="panel2" role="tabpanel">
+                    <form class="text-center border border-light p-5" action="signup" method="POST">
+                        <p class="h4 mb-4">Sign up</p>
+                        <div class="form-row mb-4">
+                            <div class="col">
+                                <input type="text" name="fullname" class="form-control" placeholder="Full Name">
+                            </div>
+                        </div>
+                        <input type="email" name="email" class="form-control mb-4" placeholder="E-mail">
+                        <input type="password" name="pass" class="form-control" placeholder="Password"
+                            aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                            At least 8 characters and 1 digit
+                        </small>
+                        Optional - for two step authentication
+                        </small>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input"
+                                id="defaultRegisterFormNewsletter">
+                            <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to
+                                our newsletter</label>
+                        </div>
+                        <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+
+                        <!-- Social register -->
+                        <p>or sign up with:</p>
+
+                        <a href="#" class="mx-2" role="button"><i
+                                class="fab fa-facebook-f light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i
+                                class="fab fa-twitter light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i
+                                class="fab fa-linkedin-in light-blue-text"></i></a>
+                        <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+                        <hr>
+
+                        <!-- Terms of service -->
+                        <p>By clicking
+                            <em>Sign up</em> you agree to our
+                            <a href="" target="_blank">terms of service</a>
+
+                    </form>
+                    <!-- Default form register -->
+
+                </div>
+                <!--/.Panel 2-->
+            </div>
+
+        </div>
+    </div>
+    <!--/.Content-->
+</div>
+</div>
+<!--/FORMS-->
