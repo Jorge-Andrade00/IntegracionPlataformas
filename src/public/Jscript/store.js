@@ -397,6 +397,10 @@ verifications = () => {
     placeOrder.addEventListener('click', (e) => {
         e.preventDefault()
         var products = contadorProductos()
+        var total = document.getElementById('total').textContent
+
+        products.push(total)
+        
 
         fetch('/api/productsVerification', {
             method: 'POST',
@@ -407,10 +411,11 @@ verifications = () => {
         })
         .then(res => res.json())
         .then(data => {
-            if (data) {
-                console.log('Lo tengo')
+            if (data.estado == true) {
+                console.log('este es el link: ', data.link)
+                location.replace(data.link)
             }else{
-                console.log('No pasa nada compa')
+                console.log('No tengo esta cantidad de ',data.nombre)
             }
         })
     })

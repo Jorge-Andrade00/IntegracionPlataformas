@@ -1,6 +1,6 @@
 module.exports={
     database: {
-        database: "pruebas",
+        database: "cco",
         password: "",
         user: "root",
         host: "localhost"

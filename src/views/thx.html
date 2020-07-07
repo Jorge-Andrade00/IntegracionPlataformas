@@ -1,0 +1,21 @@
+<%- include('plantillas/declaracion.html') %>
+<%- include('plantillas/forms.html') %>
+
+<h1>Gracias por tu compra</h1>
+<button id="volver" class="primary-btn order-submit btn-block">
+    Volver al inicio
+</button>
+
+
+
+<script>
+    const volver = document.getElementById('volver')
+    document.getElementById('miniCarro').style.display = "none"
+    
+    volver.addEventListener('click',(e)=>{
+        localStorage.clear();
+        location.replace('/index')
+    })
+</script>
+
+<%- include('plantillas/cierre.html') %>
