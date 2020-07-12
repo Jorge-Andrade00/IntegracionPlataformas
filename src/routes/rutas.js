@@ -4,6 +4,7 @@ const path = require('path');
 const passport = require('passport');
 const helpers = require('../lib/helpers');
 const Transbank = require('transbank-sdk');
+const { decodeBase64 } = require('bcryptjs');
 
 const transaction = new Transbank.Webpay(
     Transbank.Configuration.forTestingWebpayPlusNormal()
@@ -26,20 +27,6 @@ router.get('/api/products', async (req, res) => {
     res.json(jsonString);
 });
 
-/*
-router.get('/signin', (req, res) => {
-    res.render('signin.html');
-});
-
-router.get('/signup', (req, res) => {
-    //res.send('hello world');
-    if(req.isUnauthenticated()){
-    res.render('signup.html');
-    }else{
-        res.redirect('/perfil');
-    }
-});
-*/
 router.get('/perfil', (req, res) => {
 
     if (req.isAuthenticated()) {
@@ -67,12 +54,7 @@ router.post('/signup', passport.authenticate('local-signup', {
     failureFlash: true
 }));
 
-//router.post('/signin', passport.authenticate('local-signin', {
-//    successRedirect: '/perfil',
-//    failureRedirect: '/signup',
-//    failureFlash: true,
-//    successFlash: true
-//}));
+
 
 router.post('/signin', (req, res, next) => {
     passport.authenticate('local-signin', {
